@@ -1,0 +1,27 @@
+<h1>Add A New Article</h1>
+
+ <% if @error_message %>
+  <ul class="error">
+      <li><%= @error_message %></li>
+  </ul>
+<% end %>
+
+ <div>
+   <form method="post" action="/articles">
+     <div>
+       <label for="title">Title:</label>
+       <input type="text" id="title" placeholder="Article title" name="article[title]" value=<%= @title %>>
+     </div>
+     <div>
+      <label for="URL">URL:</label>
+      <input type="text" id="url" name="article[url]" value=<%= @url %>>
+     </div>
+      <label for="description">Description:</lable>
+        <input type="text" id="description" name="article[description]" value=<%= @description %>>
+     </div>
+
+     <div>
+      <input type="submit" value="Submitted">
+     </div>
+   </forms>
+ </div>
